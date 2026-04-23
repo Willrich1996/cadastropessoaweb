@@ -13,7 +13,11 @@
         <h:form>
             <h1>Cadastro Simples</h1>
             <h:outputLabel value="Digite seu nome: " />
-            <h:inputText value="#{pessoaBean.nome}" />
+            <h:inputText value="#{pessoaBean.pessoa.nome}" />
+            <h:outputLabel value="Digite seu CPF: " />
+            <h:inputText value="#{pessoaBean.pessoa.cpf}" />
+            <h:outputLabel value="Digite seu Email: " />
+            <h:inputText value="#{pessoaBean.pessoa.email}" />             
             <br/><br/>
             <h:commandButton value="Enviar para o Java" action="#{pessoaBean.cadastrar}" />
             

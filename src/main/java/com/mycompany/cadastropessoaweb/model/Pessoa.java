@@ -1,15 +1,27 @@
 
 package com.mycompany.cadastropessoaweb.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "tb_pessoa")
 public class Pessoa {
-    @Id
+   @Id
+   @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    private Long id;
+   @Column(unique = true, nullable = false, length = 11)
     private Long cpf;
     private String nome;
     private String email;
+
+    public Long getId() {
+        return id;
+    }
 
     public Long getCpf() {
         return cpf;

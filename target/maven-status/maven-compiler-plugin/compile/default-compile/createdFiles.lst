@@ -1,4 +1,6 @@
+com\mycompany\cadastropessoaweb\repository\JPAUtil.class
+com\mycompany\cadastropessoaweb\model\Pessoa.class
+com\mycompany\cadastropessoaweb\repository\PessoaRepository.class
 com\mycompany\cadastropessoaweb\resources\JakartaEE11Resource.class
 com\mycompany\cadastropessoaweb\JakartaRestConfiguration.class
-com\mycompany\cadastropessoaweb\PessoaDao.class
-com\mycompany\cadastropessoaweb\PessoaBean.class
+com\mycompany\cadastropessoaweb\controller\PessoaBean.class
