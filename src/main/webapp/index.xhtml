@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+    
+    <h:head>
+        <title>cadastropessoaweb</title>
+    </h:head>
+    
+    <h:body>
+        <h:form>
+            <h1>Cadastro Simples</h1>
+            <h:outputLabel value="Digite seu nome: " />
+            <h:inputText value="#{pessoaBean.nome}" />
+            <br/><br/>
+            <h:commandButton value="Enviar para o Java" action="#{pessoaBean.cadastrar}" />
+            
+            <hr/>
+            <h:outputText value="Resultado: #{pessoaBean.nome}" 
+                          rendered="#{not empty pessoaBean.nome}" />
+        </h:form>
+    </h:body>
+</html>

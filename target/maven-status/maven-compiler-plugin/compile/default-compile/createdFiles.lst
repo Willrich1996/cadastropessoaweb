@@ -1,0 +1,4 @@
+com\mycompany\cadastropessoaweb\resources\JakartaEE11Resource.class
+com\mycompany\cadastropessoaweb\JakartaRestConfiguration.class
+com\mycompany\cadastropessoaweb\PessoaDao.class
+com\mycompany\cadastropessoaweb\PessoaBean.class
