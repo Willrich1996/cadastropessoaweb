@@ -2,14 +2,17 @@ package com.mycompany.cadastropessoaweb.repository;
 
 import com.mycompany.cadastropessoaweb.model.Pessoa;
 import jakarta.persistence.EntityManager;
+import java.util.List;
 
 
     public class PessoaRepository {
-        public void listaTodos(Pessoa pessoa){
+        public List<Pessoa>listaTodos(){
             EntityManager em = JPAUtil.getEntityManager();
             try{
-            em.createQuery("SELECT p FROM Pessoa p", Pessoa.class).getResultList();
-
+                return em.createQuery("SELECT p FROM Pessoa p", Pessoa.class).getResultList();
+            } catch (Exception e ) {
+                e.printStackTrace();
+                return null;
             }finally{
                 em.close();
             }

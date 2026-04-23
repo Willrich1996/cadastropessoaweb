@@ -22,8 +22,8 @@
             <h:commandButton value="Enviar para o Java" action="#{pessoaBean.cadastrar}" />
             
             <hr/>
-            <h:outputText value="Resultado: #{pessoaBean.nome}" 
-                          rendered="#{not empty pessoaBean.nome}" />
+            <h:outputText value="Resultado: #{pessoaBean.pessoa.nome}" 
+                          rendered="#{not empty pessoaBean.pessoa.nome}" />
         </h:form>
     </h:body>
 </html>

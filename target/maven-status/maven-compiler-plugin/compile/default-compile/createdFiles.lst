@@ -1,3 +1,4 @@
+Main.class
 com\mycompany\cadastropessoaweb\repository\JPAUtil.class
 com\mycompany\cadastropessoaweb\model\Pessoa.class
 com\mycompany\cadastropessoaweb\repository\PessoaRepository.class

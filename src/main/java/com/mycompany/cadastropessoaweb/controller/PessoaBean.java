@@ -26,16 +26,15 @@ public class PessoaBean implements Serializable {
     public void atualizar() {
         repository.salva(pessoa);
     }
-    
-    public List<Pessoa> getLista(){
-        if (lista == null) {
+
+    public List<Pessoa> getLista() {
+        if(lista == null){
             lista = repository.listaTodos();
         }
+            
         return lista;
     }
-    
-    
-    
+     
     public Pessoa getPessoa() {
         return pessoa;
     }
