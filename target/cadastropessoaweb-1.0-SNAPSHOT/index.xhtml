@@ -3,7 +3,8 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="jakarta.faces.html"
-      xmlns:f="jakarta.faces.core">
+      xmlns:f="jakarta.faces.core"
+      xmlns:p="http://primefaces.org/ui">
     
     <h:head>
         <title>cadastropessoaweb</title>
@@ -11,19 +12,32 @@
     
     <h:body>
         <h:form>
-            <h1>Cadastro Simples</h1>
-            <h:outputLabel value="Digite seu nome: " />
-            <h:inputText value="#{pessoaBean.pessoa.nome}" />
-            <h:outputLabel value="Digite seu CPF: " />
-            <h:inputText value="#{pessoaBean.pessoa.cpf}" />
-            <h:outputLabel value="Digite seu Email: " />
-            <h:inputText value="#{pessoaBean.pessoa.email}" />             
+            <h1>Cadastro Pessoa</h1>
+            <p:panelGrid columns="2" layout="grid" style="width: 400px">
+           <p:outputLabel for="nome" value="Digite seu nome: " styleClass="field" />
+            <p:inputText id="nome" value="#{pessoaBean.pessoa.nome}" />
+            
+            <p:outputLabel for="cpf" value="Digite seu CPF: " styleClass="field" />
+            <p:inputMask id="cpf" value="#{pessoaBean.pessoa.cpf}" mask="999.999.999-99" />
+            
+            <p:outputLabel for="email" value="Digite seu Email: " styleClass="field" />
+            <p:inputText id="email" value="#{pessoaBean.pessoa.email}" />             
+            </p:panelGrid>
             <br/><br/>
-            <h:commandButton value="Enviar para o Java" action="#{pessoaBean.cadastrar}" />
+            
+            <p:commandButton value="Cadastrar" 
+                            action="#{pessoaBean.cadastrar}" 
+                            update="@form" 
+                            icon="pi pi-check" 
+                            styleClass="ui-button-raised" 
+                            style="border-radius: 4px;" />
             
             <hr/>
-            <h:outputText value="Resultado: #{pessoaBean.pessoa.nome}" 
-                          rendered="#{not empty pessoaBean.pessoa.nome}" />
+            
+            <h:outputText id="resultado" 
+                          value="Resultado: #{pessoaBean.pessoa.nome}" 
+                          rendered="#{not empty pessoaBean.pessoa.nome}" 
+                          style="font-weight: bold; color: green;" />
         </h:form>
     </h:body>
 </html>
