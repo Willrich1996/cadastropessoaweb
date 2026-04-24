@@ -16,7 +16,7 @@ public class Pessoa {
    @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long id;
    @Column(unique = true, nullable = false, length = 11)
-    private Long cpf;
+    private String cpf;
     private String nome;
     private String email;
 
@@ -24,11 +24,11 @@ public class Pessoa {
         return id;
     }
 
-    public Long getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(Long cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 

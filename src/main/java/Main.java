@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Pessoa p = new Pessoa();
         p.setNome("TESTE");
-        p.setCpf(12345678910L);
+        p.setCpf("12345678910");
         p.setEmail("teste@teste");
         
         PessoaRepository repo = new PessoaRepository();
